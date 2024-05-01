@@ -1,0 +1,29 @@
+Quick Question #1
+{1,2,3,4}
+
+Quick Question #2
+"ref"
+
+Quick Questions #3
+0: {Array(3) => true}
+1: {Array(3) => false}
+
+hasDuplicate
+const hasDuplicate = arr => new Set(arr).size !== arr.length;
+
+vowelCount
+const vowelCount(string) {
+    vowels = 'aeiou';
+    const vowelMap = new Map();
+    for (let char of string){
+        let lowerCaseChar = char.toLowerCase()
+        if (vowels.includes(lowerCaseChar)){
+            if(vowelMap.has(lowerCaseChar)) {
+                vowelMap.set(lowerCaseChar,vowelMap.get(lowerCaseChar) + 1)
+            } else {
+                vowelMap.set(lowerCaseChar, 1);
+            }
+        }
+    }
+    return vowelMap;
+} 
